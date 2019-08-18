@@ -1,0 +1,147 @@
+/*------------------------------------------------------------------
+[Table of contents]
+	+ General
+        - Fonts
+        - Common
+	+ Sections
+        - Navbar
+        - Hero Slider
+        - Content Part 1
+        - About Part
+        - Footer
+	- Responsive Design 
+-------------------------------------------------------------------*/
+
+
+
+/* Fonts 
+/*================================================== */
+@font-face {
+    font-family: 'Century_Gothic';
+    src: url('../fonts/gotic/CenturyGothic.eot');
+    src: url('../fonts/gotic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/gotic/CenturyGothic.woff2') format('woff2'),
+        url('../fonts/gotic/CenturyGothic.woff') format('woff'),
+        url('../fonts/gotic/CenturyGothic.ttf') format('truetype'),
+        url('../fonts/gotic/CenturyGothic.svg#CenturyGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Common 
+/*================================================== */
+body{
+    font-family: 'Century_Gothic';
+}
+
+
+/* Navbar 
+/*================================================== */
+.primary_custom_navbar {
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    background: transparent!important;
+    width: 100%;
+}
+a.navbar-brand {
+    width: 200px;
+    height: 70px;
+    overflow: hidden;
+}
+
+a.navbar-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+    float: left;
+    object-position: left top;
+}
+.primary_menu li.active a.nav-link{
+    color: #1C9EDA!important;
+}
+.primary_menu li a.nav-link:hover{
+    color: #1C9EDA!important;
+}
+.footer_menu li a.nav-link:hover{
+    color: #1C9EDA!important;
+}
+.primary_menu li a {
+    color: #fff!important;
+}
+.sticky {
+    background: #111!important;
+}
+
+/* Hero Slider 
+/*================================================== */
+.slide-content .item{
+    height: 500px;
+}
+.slide-content .item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Content Part 1 
+/*================================================== */
+.content_item {
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+.content_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* About Part
+/*================================================== */
+
+.about_area {
+    padding: 100px 0;
+    background: #000000;
+    margin: 80px 0 0;
+}
+.about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about_content h1 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+.about_content p {
+    color: #fff;
+    opacity: .7;
+}
+
+
+
+/* Responsive Design 
+/*================================================== */
+@media screen and (max-width: 1000px) {
+    .slide-content .item{
+        height: 350px;
+    }
+    .about_img {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slide-content .item{
+        height: 250px;
+    }
+}

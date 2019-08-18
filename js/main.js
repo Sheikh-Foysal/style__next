@@ -7,7 +7,7 @@ $(document).ready(function(){
     new WOW().init();
     GalleryFunction();
     OwlCarouselFunction();
-    SlickMobileMenuFunction();
+    stickyMenu();
 
 });
 
@@ -31,10 +31,10 @@ function GalleryFunction(){
 
 // Owl Carousel Function
 function OwlCarouselFunction(){
-    $('.owl-carousel').owlCarousel({
+    $('#hero_slider').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav:false,
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 5000,
@@ -43,6 +43,9 @@ function OwlCarouselFunction(){
         dotsSpeed: 4000,
         dragEndSpeed: 1000,
         navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        dots:false,
         // responsive:{
         //     0:{
         //         items:1
@@ -60,11 +63,12 @@ function OwlCarouselFunction(){
 
 
 
-// Slick Mobile Menu Function
-function SlickMobileMenuFunction(){
-    $('#menu').slicknav({
-        label: 'Menu',
-        duration: 500,
-        prependTo:'#demo'
-    });
+function stickyMenu(){
+    $(window).scroll(function () {
+        if($(window).scrollTop() > 20) {
+          $(".primary_custom_navbar").addClass('sticky');
+        } else {
+          $(".primary_custom_navbar").removeClass('sticky');
+        }
+      });
 }
